@@ -6,7 +6,7 @@ class EmployerLoginModal extends Component {
   render() {
     return (
       <div>
-        <Modal trigger={<Button>EmployerLogin</Button>} closeIcon>
+        <Modal trigger={<Button>Employer Login</Button>} closeIcon>
           <Modal.Header>Employer Login</Modal.Header>
           <Modal.Content image scrolling>
 
@@ -24,7 +24,7 @@ class EmployerLoginModal extends Component {
         Log-in to your account
       </div>
     </h2> */}
-    <form action="https://s.codepen.io/voltron2112/debug/PqrEPM?" method="get" class="ui large form">
+    <form method="get" class="ui large form">
       <div class="ui stacked secondary  segment">
         <div class="field">
           <div class="ui left icon input">
@@ -38,7 +38,11 @@ class EmployerLoginModal extends Component {
             <input type="password" name="password" placeholder="Password" />
           </div>
         </div>
-        <div class="ui fluid large teal submit button">Login</div>
+        <Button type='submit' onClick={() => this.props.loadComponent("EmployerHomePage")} >Log In</Button>
+        {/* <div onClick={
+          // () => this.props.loadComponent("EmployerHomePage")
+          // console.log(this.props.loadComponent)
+          }class="ui fluid large teal submit button">Login</div> */}
       </div>
 
       <div class="ui error message"></div>

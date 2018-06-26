@@ -1,9 +1,58 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+  /* margin: 0;
+  padding: 0; */
 }
 
 .text-left{
   text-align: left;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.jobs-board{
+  margin: 20px;
+}
+
+.job-employer-view{
+  /* margin: 10px; */
+  border: #000000 0.5px solid;
+  padding: 10px;
+}
+
+.landing-page{
+  background: url("./coffee.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 760px;
+  overflow: hidden;
+  color: white;
+}
+
+
+.main-header{
+
+}
+.main-header h1{
+  font-family: 'Galada', cursive;
+  font-size: 64px;
+  letter-spacing: 5px;
+  padding-top: 100px;
+  padding-left: 20px;
+}
+.main-header h2{
+  font-family: 'Galada', cursive;
+  font-size: 48px;
+  letter-spacing: 4px;
+  padding-left: 20px;
+}
+
+.main-header p{
+  font-family: 'Roboto', sans-serif;
+  font-size: 32px;
+  padding-left: 40px;
+}
+
+.main-header-icon{
+  padding: 200px;
 }
