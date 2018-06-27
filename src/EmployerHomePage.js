@@ -33,7 +33,7 @@ class EmployerHomePage extends Component {
           <Divider />
 
           <Button as="div" labelPosition="right">
-            <CreateNewPostingModal />
+            <CreateNewPostingModal handleCreatePost={this.handleCreatePost} />
             <Label as="a" basic color="blue" pointing="left">
               {this.state.employer.postings.length}
             </Label>
@@ -43,6 +43,32 @@ class EmployerHomePage extends Component {
       </div>
     );
   }
+
+  handleCreatePost = newPost => {
+    // const newPostConf = newPost
+    // const {
+    //   title = "",
+    //   pay = "",
+    //   desc = "",
+    //   req = ``,
+    //   type = "",
+    //   commitment = "",
+    //   status = "",
+    //   location = "",
+    //   interested = ["test","test"],
+    //   applicants = ["test","test"],
+    //   confirmed = ["test","test"]
+    // } = newPostConf;
+    // console.log(newPostConf);
+    const employer = this.state.employer;
+    const postings = this.state.employer.postings;
+    this.setState({
+      employer: {
+        ...employer,
+        postings: [...postings, newPost]
+      }
+    });
+  };
 }
 
 export default EmployerHomePage;

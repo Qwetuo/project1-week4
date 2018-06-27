@@ -7,6 +7,9 @@ const postings1 = [
     req: `* Must be able to commit ALL stated dates
         * Salary only paid after assignment is done`,
     location: "Bedok North",
+    type: "others",
+    commitment: [],
+    status: "active",
     interested: ["int1", "int2", "int3"],
     applicants: ["app1", "app2"],
     confirmed: ["confirm1"]
@@ -17,6 +20,9 @@ const postings1 = [
     desc: "posting2test1",
     req: `posting2test1`,
     location: "posting2test1",
+    type: "others",
+    commitment: [],
+    status: "active",
     interested: ["int3", "int4"],
     applicants: ["app3"],
     confirmed: []
@@ -26,6 +32,9 @@ const postings1 = [
     pay: "$11",
     desc: "posting3test1",
     req: `posting3test1`,
+    type: "others",
+    commitment: [],
+    status: "active",
     location: "posting3test1",
     interested: ["int5", "int6"],
     applicants: [],

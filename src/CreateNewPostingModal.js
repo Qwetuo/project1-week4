@@ -7,37 +7,39 @@ import {
   Divider,
   TextArea
 } from "semantic-ui-react";
+// import MultipleDatePicker from 'react-multiple-datepicker'
+import CalendarTry from "./CalendarTry"
 
 class CreateNewPostingModal extends Component {
   constructor() {
     super();
     this.state = {
-      title: "",
-    //   pay: "",
-    //   desc: "",
-    //   req: "",
-    //   location: "",
-    //   type: "",
-    //   subtitle: "",
-    //   subpay: "",
-    //   subdesc: "",
-    //   subreq: "",
-    //   sublocation: "",
-    //   subtype: "",
-      value: ""
+      formFields: {
+        title: "",
+        pay: "",
+        desc: "",
+        req: "",
+        location: "",
+        type: "",
+        commitment: []
+      },
+      modalOpen: false
     };
   }
+
   render() {
-    // const { title, pay, subtitle, subpay } = this.state;
     return (
       <div>
         <Modal
           trigger={
-            <Button basic color="blue">
+            <Button onClick={this.handleOpen} basic color="blue">
               <Icon name="add" />Create new posting
             </Button>
           }
-          closeIcon
+          open={this.state.modalOpen}
+          onClose={this.handleClose}
+          closeIcon={this.handleClose}
+          // <button onClick={this.handleClose}>x</button>
         >
           <Modal.Header>Create New Job Posting</Modal.Header>
           <Modal.Content image scrolling>
@@ -48,9 +50,8 @@ class CreateNewPostingModal extends Component {
                     <label>Job Title</label>
                     <input
                       placeholder="Job Title"
-                      name="title"
-                      value={this.state.value}
-                      onChange={this.handleChange}
+                      value={this.state.formFields.title}
+                      onChange={event => this.handleChange(event, "title")}
                     />
                   </Form.Field>
                   <Form.Field inline>
@@ -58,23 +59,41 @@ class CreateNewPostingModal extends Component {
                     <input
                       placeholder="Job Pay"
                       name="pay"
+                      value={this.state.formFields.pay}
+                      onChange={event => this.handleChange(event, "pay")}
                     />
                   </Form.Field>
                   <Form.Field inline>
                     <label>Job Type</label>
-                    <input placeholder="Job Type" />
+                    <input
+                      placeholder="Job Type"
+                      value={this.state.formFields.type}
+                      onChange={event => this.handleChange(event, "type")}
+                    />
                   </Form.Field>
                   <Form.Field inline>
                     <label>Location</label>
-                    <input placeholder="Location" />
+                    <input
+                      placeholder="Location"
+                      value={this.state.formFields.location}
+                      onChange={event => this.handleChange(event, "location")}
+                    />
                   </Form.Field>
                   <Form.Field inline>
                     <label>Description</label>
-                    <TextArea placeholder="Description" />
+                    <TextArea
+                      placeholder="Description"
+                      value={this.state.formFields.desc}
+                      onChange={event => this.handleChange(event, "desc")}
+                    />
                   </Form.Field>
                   <Form.Field inline>
                     <label>Requirements</label>
-                    <TextArea placeholder="Requirements" />
+                    <TextArea
+                      placeholder="Requirements"
+                      value={this.state.formFields.req}
+                      onChange={event => this.handleChange(event, "req")}
+                    />
                   </Form.Field>
 
                   <Divider />
@@ -83,6 +102,7 @@ class CreateNewPostingModal extends Component {
                     required for the role (up to 2 months from today).
                   </p>
                   <p>TODO CREATE A CALENDAR</p>
+                  <CalendarTry handleCommitmentCalendar={this.handleCommitmentCalendar} />
                   <p>
                     Build logic to see how many days were selected and create
                     dropdown for employers to select the min days
@@ -103,22 +123,49 @@ class CreateNewPostingModal extends Component {
       </div>
     );
   }
-  handleChange = event => {
+  handleOpen = () => this.setState({modalOpen: true})
+
+  handleChange(event, propertyName) {
+    const formFields = this.state.formFields;
+    formFields[propertyName] = event.target.value;
     this.setState({
-      value: event.target.value
+      formFields: formFields
     });
-  };
-  handleSubmit = () => {
-    //   const { title,pay } = this.state
-    //   this.setState({
-    //       subtitle: title,
-    //       subpay: pay
-    //   })
+  }
+
+  handleCommitmentCalendar = date => {
+    console.log(date)
     this.setState({
-      subtitle: this.state.value,
-      value: ""
+
+    })
+  }
+  handleSubmit = event => {
+    event.preventDefault();
+    const newPost = {
+      title: this.state.formFields.title,
+      pay: this.state.formFields.pay,
+      desc: this.state.formFields.desc,
+      req: this.state.formFields.req,
+      location: this.state.formFields.location,
+      type: this.state.formFields.type,
+      commitment: this.state.formFields.commitment,
+      status: "",
+      interested: [],
+      applicants: [],
+      confirmed: []
+    };
+    this.props.handleCreatePost(newPost);
+    this.setState({
+      formFields: {
+        title: "",
+        pay: "",
+        desc: "",
+        req: "",
+        location: "",
+        type: ""
+      },
+      modalOpen: false
     });
-    console.log(this.state.subtitle);
   };
 }
 

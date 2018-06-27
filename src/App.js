@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import {} from "semantic-ui-react";
 
 import EmployerHomePage from "./EmployerHomePage";
+import EmployeeHomePage from "./EmployeeHomePage";
 import LandingPage from "./LandingPage";
 
 class App extends Component {
@@ -9,7 +10,9 @@ class App extends Component {
     super();
     this.state = {
       // componentToDisplay: "LandingPage"
-      componentToDisplay: "null"
+      // componentToDisplay: "EmployeeHomePage"
+      componentToDisplay: "EmployerHomePage"
+      // componentToDisplay: "null"
     };
   }
   render() {
@@ -19,10 +22,15 @@ class App extends Component {
         {this.state.componentToDisplay === "LandingPage" && (
           <LandingPage loadComponent={this.loadComponent} />
         )}
+
         {this.state.componentToDisplay === "EmployerHomePage" && (
           <EmployerHomePage />
         )}
-        <EmployerHomePage />
+        {this.state.componentToDisplay === "EmployeeHomePage" && (
+          <EmployeeHomePage />
+        )}
+        {/* <EmployerHomePage /> */}
+        {/* <EmployeeHomePage /> */}
       </div>
     );
   }

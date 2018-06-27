@@ -1,6 +1,7 @@
 import React from "react";
 import { Grid, Icon, Segment, Divider } from "semantic-ui-react";
 import EmployerLoginModal from "./EmployerLoginModal";
+import EmployeeLoginModal from "./EmployeeLoginModal";
 
 const LandingPage = props => (
   <div className="landing-page">
@@ -32,6 +33,7 @@ const LandingPage = props => (
               />
             </Icon.Group>
             <EmployerLoginModal loadComponent={props.loadComponent} />
+            <EmployeeLoginModal loadComponent={props.loadComponent} />
           </Grid.Column>
         </div>
       </Grid>
