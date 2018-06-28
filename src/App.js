@@ -1,36 +1,29 @@
 import React, { Component } from "react";
-import {} from "semantic-ui-react";
-
 import EmployerHomePage from "./EmployerHomePage";
 import EmployeeHomePage from "./EmployeeHomePage";
 import LandingPage from "./LandingPage";
+import NavBar from "./NavBar";
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      // componentToDisplay: "LandingPage"
-      componentToDisplay: "EmployeeHomePage"
-      // componentToDisplay: "EmployerHomePage"
-      // componentToDisplay: "null"
+      componentToDisplay: "LandingPage"
     };
   }
   render() {
     return (
       <div>
-        {/* <LandingPage loadComponent={this.loadComponent} /> */}
+        <NavBar loadComponent={this.loadComponent} />
         {this.state.componentToDisplay === "LandingPage" && (
           <LandingPage loadComponent={this.loadComponent} />
         )}
-
         {this.state.componentToDisplay === "EmployerHomePage" && (
           <EmployerHomePage />
         )}
         {this.state.componentToDisplay === "EmployeeHomePage" && (
           <EmployeeHomePage />
         )}
-        {/* <EmployerHomePage /> */}
-        {/* <EmployeeHomePage /> */}
       </div>
     );
   }

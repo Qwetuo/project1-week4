@@ -45,21 +45,6 @@ class EmployerHomePage extends Component {
   }
 
   handleCreatePost = newPost => {
-    // const newPostConf = newPost
-    // const {
-    //   title = "",
-    //   pay = "",
-    //   desc = "",
-    //   req = ``,
-    //   type = "",
-    //   commitment = "",
-    //   status = "",
-    //   location = "",
-    //   interested = ["test","test"],
-    //   applicants = ["test","test"],
-    //   confirmed = ["test","test"]
-    // } = newPostConf;
-    // console.log(newPostConf);
     const employer = this.state.employer;
     const postings = this.state.employer.postings;
     this.setState({

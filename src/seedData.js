@@ -8,7 +8,18 @@ const postings1 = [
         * Salary only paid after assignment is done`,
     location: "Bedok North",
     type: "others",
-    commitment: ["20180630", "20180701", "20180707", "20180714", "20180721", "20180708", "20180722", "20180728", "20180715", "20180729"],
+    commitment: [
+      "20180630",
+      "20180701",
+      "20180707",
+      "20180714",
+      "20180721",
+      "20180708",
+      "20180722",
+      "20180728",
+      "20180715",
+      "20180729"
+    ],
     status: "active",
     interested: ["int1", "int2", "int3"],
     applicants: ["app1", "app2"],
@@ -21,7 +32,7 @@ const postings1 = [
     req: `posting2test1`,
     location: "posting2test1",
     type: "others",
-    commitment: ["20180630","20180714", "20180715", "20180716", "20180717"],
+    commitment: ["20180630", "20180714", "20180715", "20180716", "20180717"],
     status: "active",
     interested: ["int3", "int4"],
     applicants: ["app3"],
@@ -33,7 +44,14 @@ const postings1 = [
     desc: "posting3test1",
     req: `posting3test1`,
     type: "others",
-    commitment: ["20180630","20180727", "20180720", "20180803", "20180810", "20180817"],
+    commitment: [
+      "20180630",
+      "20180727",
+      "20180720",
+      "20180803",
+      "20180810",
+      "20180817"
+    ],
     status: "active",
     location: "posting3test1",
     interested: ["int5", "int6"],
@@ -42,15 +60,14 @@ const postings1 = [
   }
 ];
 
-
 const postings2 = [
   {
     title: "posting1employer2",
-    pay: "8",
+    pay: "$8",
     desc: "desc 2.1",
     req: `req 2.1`,
     type: "others",
-    commitment: ["20180701","20180702"],
+    commitment: ["20180701", "20180702"],
     status: "active",
     location: "location 2.1",
     interested: ["int"],
@@ -59,11 +76,11 @@ const postings2 = [
   },
   {
     title: "posting2employer2",
-    pay: "9",
+    pay: "$9",
     desc: "desc 2.2",
     req: `req 2.2`,
     type: "others",
-    commitment: ["20180630","20180714"],
+    commitment: ["20180630", "20180714"],
     status: "active",
     location: "location 2.2",
     interested: [],
@@ -72,7 +89,7 @@ const postings2 = [
   },
   {
     title: "posting2employer2",
-    pay: "10",
+    pay: "$10",
     desc: "desc 2.3",
     req: `req 2.3`,
     type: "others",
@@ -129,7 +146,7 @@ export const employees = [
   }
 ];
 
-export const allPostings = postings1.concat(postings2)
+export const allPostings = postings1.concat(postings2);
 
 // Empty objects (Shortcut to create new data)
 // {
@@ -155,4 +172,3 @@ export const allPostings = postings1.concat(postings2)
 //   UEN: "",
 //   postings: postingsx
 // }
-

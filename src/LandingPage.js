@@ -9,6 +9,7 @@ const LandingPage = props => (
       <Grid className="main-header">
         <Grid.Column floated="left" width={10}>
           <Segment basic>
+          <p>Prototype v 0.1</p>
             <h1>~ Lendar </h1>
             <h2>
               &emsp; Swipe. <br />
@@ -17,7 +18,7 @@ const LandingPage = props => (
             </h2>
             <Divider />
           </Segment>
-          <p>Find events job easily and start making money fast.</p>
+          <p>Cut the time required to find event jobs as we do the matching for you.</p>
         </Grid.Column>
         <div className="main-header-icon">
           <Grid.Column floated="right" width={6}>

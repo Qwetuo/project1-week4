@@ -36,9 +36,8 @@ class EmployeeCalendar extends Component {
           trigger={
             <Button onClick={this.handleOpen} basic color="blue">
               <Icon name="calendar" />For a better experience, click here to
-              select the dates you are available to work (up to 2
-              months from today) so that we will only show you jobs you can
-              commit to.
+              select the dates you are available to work (up to 2 months from
+              today) so that we will only show you jobs you can commit to.
             </Button>
           }
           open={this.state.modalOpen}
@@ -100,7 +99,6 @@ class EmployeeCalendar extends Component {
     this.setState({
       availDates: updatedDates
     });
-
   };
 
   handleSubmit = event => {

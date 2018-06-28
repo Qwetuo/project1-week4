@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Button, Checkbox, Form, Divider, Transition } from "semantic-ui-react";
-import EmployeeSignUpPageCont from "./EmployeeSignUpPageCont"
 
 export default class EmployeeSignUpPage extends Component {
   state = { visible: false };
@@ -57,7 +56,7 @@ export default class EmployeeSignUpPage extends Component {
             <Form.Field>
               <Checkbox label="I agree to the Terms and Conditions" />
             </Form.Field>
-            <Button onClick={<EmployeeSignUpPageCont />} type="submit">Sign Up</Button>
+            <Button type="submit">Sign Up</Button>
           </Form>
         </Transition>
       </div>

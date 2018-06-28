@@ -7,8 +7,7 @@ import {
   Divider,
   TextArea
 } from "semantic-ui-react";
-// import MultipleDatePicker from 'react-multiple-datepicker'
-import CreateCalendar from "./CreateCalendar"
+import CreateCalendar from "./CreateCalendar";
 
 class CreateNewPostingModal extends Component {
   constructor() {
@@ -38,8 +37,6 @@ class CreateNewPostingModal extends Component {
           }
           open={this.state.modalOpen}
           onClose={this.handleClose}
-          closeIcon={this.handleClose}
-          // <button onClick={this.handleClose}>x</button>
         >
           <Modal.Header>Create New Job Posting</Modal.Header>
           <Modal.Content image scrolling>
@@ -101,11 +98,12 @@ class CreateNewPostingModal extends Component {
                     Please indicate on the calendar the commitment dates
                     required for the role (up to 2 months from today).
                   </p>
-                  <p>TODO CREATE A CALENDAR</p>
-                  <CreateCalendar handleCommitmentCalendar={this.handleCommitmentCalendar} />
+                  <CreateCalendar
+                    handleCommitmentCalendar={this.handleCommitmentCalendar}
+                  />
                   <p>
-                    Build logic to see how many days were selected and create
-                    dropdown for employers to select the min days
+                    @KIV Build logic to see how many days were selected and
+                    create dropdown for employers to select the min days
                   </p>
                 </div>
 
@@ -115,6 +113,7 @@ class CreateNewPostingModal extends Component {
           </Modal.Content>
 
           <Modal.Actions>
+            <button onClick={this.handleClose}>x</button>
             <Button primary onClick={this.handleSubmit}>
               Proceed <Icon name="chevron right" />
             </Button>
@@ -123,23 +122,18 @@ class CreateNewPostingModal extends Component {
       </div>
     );
   }
-  handleOpen = () => this.setState({modalOpen: true})
+  handleOpen = () => this.setState({ modalOpen: true });
+  handleClose = () => this.setState({ modalOpen: false });
 
-  handleChange(event, propertyName) {
-    const formFields = this.state.formFields;
-    formFields[propertyName] = event.target.value;
-    this.setState({
-      formFields: formFields
-    });
-  }
+
 
   handleCommitmentCalendar = dates => {
     const formFields = this.state.formFields;
-    formFields["commitment"] = dates ;
+    formFields["commitment"] = dates;
     this.setState({
       formFields: formFields
-    })
-  }
+    });
+  };
   handleSubmit = event => {
     event.preventDefault();
     const newPost = {

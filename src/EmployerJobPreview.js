@@ -1,6 +1,6 @@
 import React from "react";
 import { Segment, Grid } from "semantic-ui-react";
-import CommitmentPreview from "./CommitmentPreview"
+import CommitmentPreview from "./CommitmentPreview";
 
 const EmployerJobPreview = props => (
   <div>
@@ -9,7 +9,7 @@ const EmployerJobPreview = props => (
         <Segment key={i}>
           <Grid>
             <Grid.Column width={3}>
-              <CommitmentPreview commitment={post.commitment}/>
+              <CommitmentPreview commitment={post.commitment} />
             </Grid.Column>
             <Grid.Column width={9}>
               <h4>Job title: {post.title}</h4>
