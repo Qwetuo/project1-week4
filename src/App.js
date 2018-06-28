@@ -10,8 +10,8 @@ class App extends Component {
     super();
     this.state = {
       // componentToDisplay: "LandingPage"
-      // componentToDisplay: "EmployeeHomePage"
-      componentToDisplay: "EmployerHomePage"
+      componentToDisplay: "EmployeeHomePage"
+      // componentToDisplay: "EmployerHomePage"
       // componentToDisplay: "null"
     };
   }

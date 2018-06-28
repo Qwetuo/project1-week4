@@ -33,7 +33,7 @@ class EmployeeLoginModal extends Component {
             <input type="password" name="password" placeholder="Password" />
           </div>
         </div>
-        <Button type='submit' onClick={() => this.props.loadComponent("EmployeeHomePage")} >Log In</Button>
+        <Button fluid type='submit' onClick={() => this.props.loadComponent("EmployeeHomePage")} >Log In</Button>
         {/* <div onClick={
           // () => this.props.loadComponent("EmployerHomePage")
           // console.log(this.props.loadComponent)

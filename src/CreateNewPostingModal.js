@@ -8,7 +8,7 @@ import {
   TextArea
 } from "semantic-ui-react";
 // import MultipleDatePicker from 'react-multiple-datepicker'
-import CalendarTry from "./CalendarTry"
+import CreateCalendar from "./CreateCalendar"
 
 class CreateNewPostingModal extends Component {
   constructor() {
@@ -102,7 +102,7 @@ class CreateNewPostingModal extends Component {
                     required for the role (up to 2 months from today).
                   </p>
                   <p>TODO CREATE A CALENDAR</p>
-                  <CalendarTry handleCommitmentCalendar={this.handleCommitmentCalendar} />
+                  <CreateCalendar handleCommitmentCalendar={this.handleCommitmentCalendar} />
                   <p>
                     Build logic to see how many days were selected and create
                     dropdown for employers to select the min days
@@ -133,10 +133,11 @@ class CreateNewPostingModal extends Component {
     });
   }
 
-  handleCommitmentCalendar = date => {
-    console.log(date)
+  handleCommitmentCalendar = dates => {
+    const formFields = this.state.formFields;
+    formFields["commitment"] = dates ;
     this.setState({
-
+      formFields: formFields
     })
   }
   handleSubmit = event => {

@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import { Icon, Divider } from "semantic-ui-react";
+import { Icon, Divider, Button } from "semantic-ui-react";
+import EmployeeCalendar from "./EmployeeCalendar"
 
 class EmployeeOwnProfile extends Component {
     render() {
         return (
             <div>
             <header className="text-center">
-              <h2>Welcome Back </h2>
+              <h2>Welcome Back {this.props.employee.name} </h2>
               <Icon.Group size="huge">
                 <Icon
                   circular
@@ -16,13 +17,11 @@ class EmployeeOwnProfile extends Component {
                 />
               </Icon.Group>
               <Divider />
-            <p>Click here if you would like to see all available jobs on our site.</p>
-            <p>For a better experience:</p>
-              <p>On the calendar below, select the available dates you are available to work (up to 2 months from today) so that we will only show you jobs you can commit to.</p>
-              <p>CALENDAR TODO</p>
-              <p></p>
+              <p>It have been __ days since you have last updated your availability. (@KIV)</p>
+              <Button as="div" labelPosition="right">
+            <EmployeeCalendar handleAvailCalendar={this.props.handleAvailCalendar} avail={this.props.employee.avail} />
+          </Button>
             </header>
-            {/* <EmployerJobsBoard employer={this.state.employer} /> */}
           </div>
         );
     }
