@@ -5,4 +5,4 @@
 
 ### For more information on the project workflow, visit https://docs.google.com/presentation/d/12QphoNYvfLjqFehgJ4MAEcRvo6fIanvtjwEvJdVLod0/edit?usp=sharing
 
-#### Note: This project is only a prototype
+#### Note: This project is only a prototype for showcase purposes. It uses seeded data and lacks actual functionality.
