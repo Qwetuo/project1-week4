@@ -70,8 +70,6 @@ class EmployeeCalendar extends Component {
                     interpolateSelection={defaultMultipleDateInterpolation}
                     onSelect={this.handleCalendarSelect}
                   />
-                  {this.state.availDates.length}
-                  <p>{this.props.avail.toString()}</p>
                 </div>
 
                 <Divider />
