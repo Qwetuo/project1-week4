@@ -125,7 +125,7 @@ class CreateNewPostingModal extends Component {
   handleOpen = () => this.setState({ modalOpen: true });
   handleClose = () => this.setState({ modalOpen: false });
 
-  handleChange(event, propertyName) {
+  handleChange = (event, propertyName) => {
     const formFields = this.state.formFields;
     formFields[propertyName] = event.target.value;
     this.setState({

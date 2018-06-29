@@ -30,6 +30,7 @@ class CreateCalendar extends Component {
     return (
       <div>
         <InfiniteCalendar
+        autoFocus = {false}
           width={400}
           height={300}
           displayOptions={{
