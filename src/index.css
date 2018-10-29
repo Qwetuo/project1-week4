@@ -22,11 +22,11 @@ body {
 }
 
 .landing-page{
-  background: url("./coffee.jpg") no-repeat center center fixed;
+  background: url("./agenda-background.jpg") no-repeat center center fixed;
   background-size: cover;
   height: 760px;
   overflow: hidden;
-  color: white;
+  color: black;
 }
 
 
