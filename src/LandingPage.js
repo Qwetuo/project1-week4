@@ -9,7 +9,6 @@ const LandingPage = props => (
       <Grid className="main-header">
         <Grid.Column floated="left" width={10}>
           <Segment basic>
-          <p>Prototype v 0.1</p>
             <h1>~ Lendar </h1>
             <h2>
               &emsp; Swipe. <br />

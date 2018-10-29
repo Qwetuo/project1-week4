@@ -14,16 +14,21 @@ class App extends Component {
   render() {
     return (
       <div>
-        <NavBar loadComponent={this.loadComponent} />
-        {this.state.componentToDisplay === "LandingPage" && (
-          <LandingPage loadComponent={this.loadComponent} />
-        )}
-        {this.state.componentToDisplay === "EmployerHomePage" && (
-          <EmployerHomePage />
-        )}
-        {this.state.componentToDisplay === "EmployeeHomePage" && (
-          <EmployeeHomePage />
-        )}
+        <NavBar
+          activeComponent={this.state.componentToDisplay}
+          loadComponent={this.loadComponent}
+        />
+        <div className="margin-top">
+          {this.state.componentToDisplay === "LandingPage" && (
+            <LandingPage loadComponent={this.loadComponent} />
+          )}
+          {this.state.componentToDisplay === "EmployerHomePage" && (
+            <EmployerHomePage />
+          )}
+          {this.state.componentToDisplay === "EmployeeHomePage" && (
+            <EmployeeHomePage />
+          )}
+        </div>
       </div>
     );
   }

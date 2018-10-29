@@ -60,3 +60,15 @@ body {
 .employee-view-job{
   margin: 30px;
 }
+
+.margin-top {
+  margin-top: 60px;
+}
+
+.nav-bar {
+  padding: 2px 25px;
+}
+
+.nav-bar h2 {
+  margin: 0px;
+}
