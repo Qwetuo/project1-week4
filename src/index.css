@@ -29,6 +29,10 @@ body {
   color: black;
 }
 
+.background {
+  background: rgb(245, 245, 245);
+  height: 800px;
+}
 
 .main-header{
 
@@ -71,4 +75,43 @@ body {
 
 .nav-bar h2 {
   margin: 0px;
+}
+
+.intro-container {
+  position: relative;
+  top: 160px;
+  width: 500px;
+  margin: auto;
+  text-align: center;
+  font-size: 2.3em;
+  line-height: 1.2em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: black
+}
+
+.flip-card {
+  width: 500px;
+  color: whitesmoke;
+  text-align: center;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+.info-container {
+  position: absolute;
+  background: white;
+  width: 90%;
+  height: 850px;
+  top: 730px;
+  left: 5%;
+  padding: 5%;
+  font-size: 1.5em;
+}
+
+.signup-landing {
+  background: #d2d4bc;
+  padding: 5%;
+  width: 85%;
+  margin: auto;
 }

@@ -1,44 +1,42 @@
-import React from "react";
-import { Grid, Icon, Segment, Divider } from "semantic-ui-react";
-import EmployerLoginModal from "./EmployerLoginModal";
-import EmployeeLoginModal from "./EmployeeLoginModal";
+import React, { Component } from "react";
+import RenderFlip from "./RenderFlip";
+import EmployeeSignUpForm from "./EmployeeSignUpForm";
+// import EmployeeLoginModal from "./EmployeeLoginModal";
+// import EmployerLoginModal from "./EmployerLoginModal";
 
-const LandingPage = props => (
-  <div className="landing-page">
-    <div>
-      <Grid className="main-header">
-        <Grid.Column floated="left" width={10}>
-          <Segment basic>
-            <h1>~ Lendar </h1>
-            <h2>
-              &emsp; Swipe. <br />
-              &emsp; &emsp; Match. <br />
-              &emsp; &emsp; &emsp; Work.
-            </h2>
-            <Divider />
-          </Segment>
-          <p>Cut the time required to find event jobs as we do the matching for you.</p>
-        </Grid.Column>
-        <div className="main-header-icon">
-          <Grid.Column floated="right" width={6}>
-            <Icon.Group size="huge">
-              <Icon circular inverted color="red" name="user" />
-            </Icon.Group>
-            <Icon.Group size="huge">
-              <Icon
-                circular
-                inverted
-                color="blue"
-                name="money bill alternate outline"
-              />
-            </Icon.Group>
-            <EmployerLoginModal loadComponent={props.loadComponent} />
-            <EmployeeLoginModal loadComponent={props.loadComponent} />
-          </Grid.Column>
+class LandingPage extends Component {
+  constructor() {
+    super();
+    this.state = {};
+  }
+
+  render() {
+    return (
+      <div>
+        <div className="landing-page">
+          <div className="intro-container">
+            EARN QUICK BUCKS WHILE <RenderFlip render={"freeTime"} />
+            SIMPLY SWIPE, MATCH, WORK
+          </div>
         </div>
-      </Grid>
-    </div>
-  </div>
-);
+        <div className="background">
+          <div className="info-container">
+            <p>
+              No more browsing through hundreds of job posting each day just to
+              find one that can fit into your schedule.
+            </p>
+            <p>Let us send you the perfect jobs for your schedule.</p>
+            <div className="signup-landing">
+              <p>Sign Up for LENDAR today!</p>
+              <EmployeeSignUpForm />
+            </div>
+            {/* <EmployeeLoginModal loadComponent={this.props.loadComponent} /> */}
+            {/* <EmployerLoginModal loadComponent={this.props.loadComponent} /> */}
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
 
 export default LandingPage;
