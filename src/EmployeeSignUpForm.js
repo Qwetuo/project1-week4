@@ -1,39 +1,41 @@
 import React, { Component } from "react";
 import { Button, Checkbox, Form, Divider } from "semantic-ui-react";
 
+const citizenship = [
+  { key: "SG", text: "Singaporean", value: "singaporean" },
+  { key: "PR", text: "Permanent Resident", value: "pr" },
+  { key: "others", text: "Others", value: "others" }
+];
+
+const education = [
+  { key: "diploma", text: "Diploma", value: "diploma" },
+  { key: "degree", text: "Degree", value: "degree" },
+  { key: "O", text: "O Levels", value: "o" },
+  { key: "N", text: "N Levels", value: "n" },
+  { key: "A", text: "A Levels", value: "a" },
+  { key: "psle", text: "PSLE", value: "psle" }
+];
+
 export default class EmployeeSignUpForm extends Component {
   render() {
     return (
       <Form widths={15}>
         <div className="text-left">
-          <Form.Field inline>
-            <label>Name</label>
-            <input placeholder="Name" />
-          </Form.Field>
-          <Form.Field inline>
-            <label>Email</label>
-            <input placeholder="Email" />
-          </Form.Field>
-          <Form.Field inline>
-            <label>Mobile No</label>
-            <input placeholder="Mobile No" />
-          </Form.Field>
-          <Form.Field inline>
-            <label>Password</label>
-            <input placeholder="Password" />
-          </Form.Field>
-          <Form.Field inline>
-            <label>Confirm Password</label>
-            <input placeholder="Confirm Password" />
-          </Form.Field>
-          <Form.Field inline>
-            <label>Employment Status</label>
-            <input placeholder="SGrean / PR / Pass" />
-          </Form.Field>
-          <Form.Field inline>
-            <label>Current/Highest Education</label>
-            <input placeholder="Os? Ns ? Diploma?" />
-          </Form.Field>
+          <Form.Input placeholder="Name" />
+          <Form.Input placeholder="Email" />
+          <Form.Input placeholder="Mobile No" />
+          <Form.Input placeholder="Password" />
+          <Form.Input placeholder="Confirm Password" />
+          <Form.Select
+            label="Citizenship"
+            options={citizenship}
+            placeholder="Ciizenship"
+          />
+          <Form.Select
+            label="Current / Highest Education"
+            options={education}
+            placeholder="Education"
+          />
         </div>
 
         <Divider />
@@ -41,7 +43,7 @@ export default class EmployeeSignUpForm extends Component {
         <Form.Field>
           <Checkbox label="I agree to the Terms and Conditions" />
         </Form.Field>
-        <Button type="submit">Sign Up</Button>
+        <Button fluid type="submit">Sign Up</Button>
       </Form>
     );
   }
