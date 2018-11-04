@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Button, Checkbox, Form, Divider, Transition } from "semantic-ui-react";
+import { Button, Divider, Transition } from "semantic-ui-react";
 import EmployeeSignUpForm from "./EmployeeSignUpForm"
 
 export default class EmployeeSignUpPage extends Component {
