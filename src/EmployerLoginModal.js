@@ -3,7 +3,6 @@ import { Button, Modal } from "semantic-ui-react";
 import EmployerSignUpPage from "./EmployerSignUpPage";
 
 class EmployerLoginModal extends Component {
-  
   handleRedirect = () => {
     this.props.history.push({
       pathname: "/employer/prototype"
@@ -55,7 +54,7 @@ class EmployerLoginModal extends Component {
                     <div class="ui error message" />
                   </form>
 
-                  <Button onClick={this.handleRedirect}>
+                  <Button primary onClick={this.handleRedirect}>
                     Click here to check out a prototype employer UI instead.
                   </Button>
 

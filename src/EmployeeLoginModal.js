@@ -54,9 +54,10 @@ class EmployeeLoginModal extends Component {
                     <div class="ui error message" />
                   </form>
 
-                  <Button onClick={this.handleRedirect}>
+                  <Button primary onClick={this.handleRedirect}>
                     Click here to check out a prototype employee UI instead.
                   </Button>
+                  <br />
 
                   <EmployeeSignUpPage />
                 </div>
