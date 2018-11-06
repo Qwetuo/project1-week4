@@ -3,10 +3,17 @@ import { Button, Modal } from "semantic-ui-react";
 import EmployerSignUpPage from "./EmployerSignUpPage";
 
 class EmployerLoginModal extends Component {
+  
+  handleRedirect = () => {
+    this.props.history.push({
+      pathname: "/employer/prototype"
+    });
+  };
+
   render() {
     return (
       <div>
-        <Modal trigger={<Button>Employer Login</Button>} closeIcon>
+        <Modal trigger={this.props.trigger} closeIcon>
           <Modal.Header>Employer Login</Modal.Header>
           <Modal.Content image scrolling>
             <Modal.Description>
@@ -41,12 +48,16 @@ class EmployerLoginModal extends Component {
                           this.props.loadComponent("EmployerHomePage")
                         }
                       >
-                        Prototype a/c Log In
+                        Log In
                       </Button>
                     </div>
 
                     <div class="ui error message" />
                   </form>
+
+                  <Button onClick={this.handleRedirect}>
+                    Click here to check out a prototype employer UI instead.
+                  </Button>
 
                   <EmployerSignUpPage />
                 </div>

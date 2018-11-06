@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import EmployerHomePage from "./EmployerHomePage";
 import EmployeeHomePage from "./EmployeeHomePage";
 import LandingPage from "./LandingPage";
-import NavBar from "./NavBar";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 class App extends Component {
   constructor() {
@@ -14,21 +14,17 @@ class App extends Component {
   render() {
     return (
       <div>
-        <NavBar
-          activeComponent={this.state.componentToDisplay}
-          loadComponent={this.loadComponent}
-        />
-        <div className="margin-top">
-          {this.state.componentToDisplay === "LandingPage" && (
-            <LandingPage loadComponent={this.loadComponent} />
-          )}
-          {this.state.componentToDisplay === "EmployerHomePage" && (
-            <EmployerHomePage />
-          )}
-          {this.state.componentToDisplay === "EmployeeHomePage" && (
-            <EmployeeHomePage />
-          )}
-        </div>
+        <Router>
+          <div className="margin-top">
+            <Route exact path="/" component={LandingPage} />
+            <Route exact path="/user/prototype" component={EmployeeHomePage} />
+            <Route
+              exact
+              path="/employer/prototype"
+              component={EmployerHomePage}
+            />
+          </div>
+        </Router>
       </div>
     );
   }

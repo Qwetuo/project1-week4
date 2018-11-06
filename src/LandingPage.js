@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import RenderFlip from "./RenderFlip";
+import { Menu } from "semantic-ui-react";
+import NavBar from "./NavBar";
+import EmployerLoginModal from "./EmployerLoginModal";
+import EmployeeLoginModal from "./EmployeeLoginModal";
 import EmployeeSignUpForm from "./EmployeeSignUpForm";
-// import EmployeeLoginModal from "./EmployeeLoginModal";
-// import EmployerLoginModal from "./EmployerLoginModal";
 
 class LandingPage extends Component {
   constructor() {
@@ -13,6 +15,20 @@ class LandingPage extends Component {
   render() {
     return (
       <div>
+        <NavBar
+          employer={
+            <EmployerLoginModal
+              history={this.props.history}
+              trigger={<Menu.Item name="Employer Login" />}
+            />
+          }
+          employee={
+            <EmployeeLoginModal
+              history={this.props.history}
+              trigger={<Menu.Item name="Employee Login" />}
+            />
+          }
+        />
         <div className="landing-page">
           <div className="intro-container">
             EARN QUICK BUCKS WHILE <RenderFlip render={"freeTime"} />
@@ -30,8 +46,6 @@ class LandingPage extends Component {
               <p>Sign Up for LENDAR today!</p>
               <EmployeeSignUpForm />
             </div>
-            {/* <EmployeeLoginModal loadComponent={this.props.loadComponent} /> */}
-            {/* <EmployerLoginModal loadComponent={this.props.loadComponent} /> */}
           </div>
         </div>
       </div>
