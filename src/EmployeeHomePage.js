@@ -5,6 +5,7 @@ import EmployeeViewJobs from "./EmployeeViewJobs";
 import { allPostings, employees } from "./seedData";
 import ViewAllPostings from "./ViewAllPostings";
 import ViewFilteredPostings from "./ViewFilteredPostings";
+import NavBar from "./NavBar"
 
 class EmployeeHomePage extends Component {
   constructor() {
@@ -51,6 +52,7 @@ class EmployeeHomePage extends Component {
     ];
     return (
       <div>
+        <NavBar />
         <EmployeeOwnProfile
           loadComponent={this.loadComponent}
           employee={this.state.employee}

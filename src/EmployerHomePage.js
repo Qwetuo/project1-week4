@@ -3,6 +3,7 @@ import { Icon, Divider, Button, Label } from "semantic-ui-react";
 import { employers } from "./seedData";
 import CreateNewPostingModal from "./CreateNewPostingModal";
 import EmployerJobsBoard from "./EmployerJobsBoard";
+import NavBar from "./NavBar";
 
 class EmployerHomePage extends Component {
   constructor() {
@@ -19,6 +20,7 @@ class EmployerHomePage extends Component {
   render() {
     return (
       <div>
+        <NavBar />
         <header className="text-center">
           <h2>Welcome Back {this.state.employer.name}</h2>
           <h2>{this.state.employer.coyName}</h2>
