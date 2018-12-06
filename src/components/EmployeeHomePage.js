@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Tab, Divider } from "semantic-ui-react";
 import EmployeeOwnProfile from "./EmployeeOwnProfile";
 import EmployeeViewJobs from "./EmployeeViewJobs";
-import { allPostings, employees } from "./seedData";
+import { allPostings, employees } from "../seedData";
 import ViewAllPostings from "./ViewAllPostings";
 import ViewFilteredPostings from "./ViewFilteredPostings";
 import NavBar from "./NavBar"
