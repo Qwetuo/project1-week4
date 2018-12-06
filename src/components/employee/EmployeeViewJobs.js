@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Segment, Button } from "semantic-ui-react";
-import CommitmentPreview from "./CommitmentPreview";
+import CommitmentPreview from "../CommitmentPreview";
 
 class EmployeeViewJobs extends Component {
   render() {

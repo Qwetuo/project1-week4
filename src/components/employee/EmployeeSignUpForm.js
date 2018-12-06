@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Button, Form, Divider } from "semantic-ui-react";
 
-import { API_URL } from "../utils/configVar";
+import { API_URL } from "../../utils/configVar";
 
 const citizenship = [
   { key: "SG", text: "Singaporean", value: "singaporean" },

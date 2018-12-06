@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Button, Modal, Message } from "semantic-ui-react";
 import EmployerSignUpPage from "./EmployerSignUpPage";
-import { API_URL } from "../utils/configVar";
+import { API_URL } from "../../utils/configVar";
 
 class EmployerLoginModal extends Component {
   constructor() {

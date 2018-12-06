@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import EmployerHomePage from "./components/EmployerHomePage";
-import EmployeeHomePage from "./components/EmployeeHomePage";
+import EmployerHomePage from "./components/employer/EmployerHomePage";
+import EmployeeHomePage from "./components/employee/EmployeeHomePage";
 import LandingPage from "./components/LandingPage";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 

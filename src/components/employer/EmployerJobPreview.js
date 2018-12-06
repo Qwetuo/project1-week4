@@ -1,6 +1,6 @@
 import React from "react";
 import { Segment, Grid } from "semantic-ui-react";
-import CommitmentPreview from "./CommitmentPreview";
+import CommitmentPreview from "../CommitmentPreview";
 
 const EmployerJobPreview = props => (
   <div>

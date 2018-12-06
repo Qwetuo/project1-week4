@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Icon, Divider, Button, Label } from "semantic-ui-react";
-import { employers } from "../seedData";
+import { employers } from "../../seedData";
 import CreateNewPostingModal from "./CreateNewPostingModal";
 import EmployerJobsBoard from "./EmployerJobsBoard";
-import NavBar from "./NavBar";
+import NavBar from "../NavBar";
 
 class EmployerHomePage extends Component {
   constructor() {

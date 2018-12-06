@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import RenderFlip from "./RenderFlip";
 import { Menu } from "semantic-ui-react";
 import NavBar from "./NavBar";
-import EmployerLoginModal from "./EmployerLoginModal";
-import EmployeeLoginModal from "./EmployeeLoginModal";
-import EmployeeSignUpForm from "./EmployeeSignUpForm";
+import EmployerLoginModal from "./employer/EmployerLoginModal";
+import EmployeeLoginModal from "./employee/EmployeeLoginModal";
+import EmployeeSignUpForm from "./employee/EmployeeSignUpForm";
 
 class LandingPage extends Component {
   constructor() {
