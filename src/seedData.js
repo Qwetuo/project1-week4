@@ -128,7 +128,7 @@ export const employees = [
     password: "000000",
     citizen: "Singapore",
     education: "diploma",
-    avail: [],
+    avail: next10DaysDates.slice(0,5),
     updatedAvail: "20180504"
   },
   {

@@ -21,10 +21,10 @@ var twoMonthsLater = new Date(
 );
 
 class EmployeeCalendar extends Component {
-  constructor() {
+  constructor(props) {
     super();
     this.state = {
-      availDates: [],
+      availDates: props.avail,
       modalOpen: false
     };
   }
