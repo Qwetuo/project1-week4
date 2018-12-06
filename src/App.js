@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import EmployerHomePage from "./EmployerHomePage";
-import EmployeeHomePage from "./EmployeeHomePage";
-import LandingPage from "./LandingPage";
+import EmployerHomePage from "./components/EmployerHomePage";
+import EmployeeHomePage from "./components/EmployeeHomePage";
+import LandingPage from "./components/LandingPage";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 class App extends Component {
